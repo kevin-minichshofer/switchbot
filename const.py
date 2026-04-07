@@ -30,6 +30,7 @@ class SupportedModels(StrEnum):
     HUMIDIFIER = "humidifier"
     LOCK = "lock"
     LOCK_PRO = "lock_pro"
+    LOCK_PRO_WIFI = "lock_pro_wifi"
     BLIND_TILT = "blind_tilt"
     HUB2 = "hub2"
     RELAY_SWITCH_1PM = "relay_switch_1pm"
@@ -78,6 +79,7 @@ CONNECTABLE_SUPPORTED_MODEL_TYPES = {
     SwitchbotModel.HUMIDIFIER: SupportedModels.HUMIDIFIER,
     SwitchbotModel.LOCK: SupportedModels.LOCK,
     SwitchbotModel.LOCK_PRO: SupportedModels.LOCK_PRO,
+    SwitchbotModel.LOCK_PRO_WIFI: SupportedModels.LOCK_PRO_WIFI,
     SwitchbotModel.BLIND_TILT: SupportedModels.BLIND_TILT,
     SwitchbotModel.HUB2: SupportedModels.HUB2,
     SwitchbotModel.RELAY_SWITCH_1PM: SupportedModels.RELAY_SWITCH_1PM,
@@ -137,6 +139,7 @@ ENCRYPTED_MODELS = {
     SwitchbotModel.RELAY_SWITCH_1PM,
     SwitchbotModel.LOCK,
     SwitchbotModel.LOCK_PRO,
+    SwitchbotModel.LOCK_PRO_WIFI,
     SwitchbotModel.LOCK_LITE,
     SwitchbotModel.LOCK_ULTRA,
     SwitchbotModel.AIR_PURIFIER_JP,
@@ -162,6 +165,7 @@ ENCRYPTED_SWITCHBOT_MODEL_TO_CLASS: dict[
 ] = {
     SwitchbotModel.LOCK: switchbot.SwitchbotLock,
     SwitchbotModel.LOCK_PRO: switchbot.SwitchbotLock,
+    SwitchbotModel.LOCK_PRO_WIFI: switchbot.SwitchbotLock,
     SwitchbotModel.RELAY_SWITCH_1PM: switchbot.SwitchbotRelaySwitch,
     SwitchbotModel.RELAY_SWITCH_1: switchbot.SwitchbotRelaySwitch,
     SwitchbotModel.LOCK_LITE: switchbot.SwitchbotLock,
@@ -206,16 +210,3 @@ CONF_KEY_ID = "key_id"
 CONF_ENCRYPTION_KEY = "encryption_key"
 CONF_LOCK_NIGHTLATCH = "lock_force_nightlatch"
 CONF_CURTAIN_SPEED = "curtain_speed"
-
-AIRPURIFIER_BASIC_MODELS = {
-    SwitchbotModel.AIR_PURIFIER_JP,
-    SwitchbotModel.AIR_PURIFIER_US,
-}
-AIRPURIFIER_TABLE_MODELS = {
-    SwitchbotModel.AIR_PURIFIER_TABLE_JP,
-    SwitchbotModel.AIR_PURIFIER_TABLE_US,
-}
-AIRPURIFIER_PM25_MODELS = {
-    SwitchbotModel.AIR_PURIFIER_US,
-    SwitchbotModel.AIR_PURIFIER_TABLE_US,
-}

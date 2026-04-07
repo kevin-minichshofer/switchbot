@@ -39,7 +39,9 @@ rules:
     comment: |
       Once a cryptographic key is successfully obtained for SwitchBot devices,
       it will be granted perpetual validity with no expiration constraints.
-  test-coverage: done
+  test-coverage:
+    status: done
+
   # Gold
   devices: done
   diagnostics: done
