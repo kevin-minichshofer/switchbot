@@ -43,5 +43,5 @@
   "loggers": ["switchbot"],
   "quality_scale": "gold",
   "requirements": ["pyswitchbot@git+https://github.com/kevin-minichshofer/pySwitchbot.git@master"],
-  "version": "0.0.1"
+  "version": "2026.4.4_fixed"
 }
